@@ -25,13 +25,18 @@ body{
 	display: block;
 }
 
+.content{
+	width:60%;
+	padding:0 0.983rem;
+	margin: 0 auto;
+	/*min-width: 37.5rem;*/
+}
+
 ul{
 	list-style: none;
-}
-ul{
 	display:block;
-
 }
+
 
 /*Temporary Border*/
 /*.top-navigation,
@@ -48,6 +53,9 @@ nav{
 	display: block;
 }
 
+/* Header styles 
+	(all the styles inside the < header > or < nav > tags) 
+*/
 button{
 	width:9.688rem;
 	border-radius: 4px;
@@ -58,9 +66,7 @@ button{
 	color: white;
 	font-size: 1.25rem;
 }
-/* Header styles 
-	(all the styles inside the < header > or < nav > tags) 
-*/
+
 .top-navigation{
 	background-color: #fff;
 	width:100%;
@@ -69,7 +75,7 @@ button{
 	z-index:9999;
 }
 
-.top-navigation > .content{
+.top-navigation .content{
 	height: 4.375rem;
 	margin: 0 auto;
 
@@ -115,17 +121,18 @@ button{
 	
 }
 
-.introduction h1{
-	margin-top: 17.5rem;
-	font-size: 3.125rem;
-}
-
 .introduction h1,
 .introduction h3{
 	color:white;
 	text-align: center;
 	font-weight: 300;
 }
+
+.introduction h1{
+	margin-top: 17.5rem;
+	font-size: 3.125rem;
+}
+
 
 .introduction h3{
 	margin-top: 1.25rem;
@@ -170,6 +177,15 @@ button{
 	margin: 2.5rem 0 1.875rem;
 }
 
+
+
+
+
+
+/* Footer styles 
+	(all the styles inside the < footer > tag)
+*/
+
 .social{
 	background-color: #fff;
 	overflow: auto;
@@ -184,7 +200,7 @@ button{
 
 }
 
-.social .icons > li{
+.social .icons li{
 	border-radius: 1.25rem;
 	width:2.5rem;
 	height: 2.5rem;
@@ -193,6 +209,11 @@ button{
 	border:1px solid #eaebec;
 	padding: 0.625rem 0;
 	text-align: center;
+
+}
+
+.social .icons li:hover{
+	cursor:pointer;
 
 }
 
@@ -210,26 +231,119 @@ button{
 
 }
 
-.social .icons li:hover{
-	cursor:pointer;
-
-}
-.content{
-	width:60%;
-	padding:0 0.983rem;
-	margin: 0 auto;
-	min-width: 37.5rem;
-}
-
-
-
-
-/* Footer styles 
-	(all the styles inside the < footer > tag)
-*/
 
 
 /* Responsive styles 
 	(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
 */
 
+/*desktop first approach*/
+
+/*ipad landscape / small laptop*/
+@media only screen and (max-width: 1024px) {
+	body  {
+		color:blue;
+	}
+	.content {
+		width:80%;
+	}
+}
+
+/*ipad potrait*/
+@media only screen and (max-width: 768px) {
+	body  {
+		color:red;
+	}
+	.content {
+		width:95%;
+	}
+
+	.top-navigation .links{
+	float: right;
+	color: #838994;
+	font-size: .80rem;
+	margin-top: 1.7rem;
+	}
+
+
+
+	.cases .devices li{
+	display:block;
+	width:100%;
+	float:left;
+	}
+
+
+
+/*	.cases h2 {
+    font-size: 1.75rem;
+    margin: 1.625rem 0 3.125rem;
+    font-weight: 300;
+    }*/
+
+}
+
+/*iPhone landscape*/
+@media only screen and (max-width: 480px) {
+	body  {
+		color:green;
+	}
+	.content {
+		width: 95.0%;
+	}
+
+	.top-navigation .content {
+		height: 8.375rem;
+		margin: 0 auto;
+	}
+	.top-navigation .links{
+	float: right;
+	color: #838994;
+	font-size: 1.00rem;
+	margin: 1.7rem 0;
+	}
+
+	.top-navigation .links li{
+	display:block;
+	margin-left:1.563rem;}
+
+	.top-navigation .logo{
+	height:8.375rem;
+	margin: auto 0;
+}
+}
+
+/*iPhone portrait*/
+@media only screen and (max-width: 320px) {
+	body  {
+		color:purple;
+	}
+	.introduction h1,
+	.introduction h3{
+		color:white;
+		text-align: center;
+		font-weight: 300;
+	}
+	.introduction h1{
+		margin-top: 17.5rem;
+		font-size: 2.125rem;
+	}
+	.introduction h3{
+		margin-top: 1.25rem;
+		font-size: 1.00rem;
+	}
+
+	.cases .content {
+	    margin-top: 5rem;
+	}
+
+	.cases h2{
+		font-size: 2rem;
+	}
+
+	.cases .devices h3{
+		font-weight: 400;
+		font-size: 1.3rem;
+		margin: 2.5rem 0 1.875rem;
+	}
+}
